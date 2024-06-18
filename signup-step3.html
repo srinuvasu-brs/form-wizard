@@ -1,0 +1,135 @@
+<!--
+     Author: Build Rise Shine with Nyros (BRS) 
+     Created: 2023
+     Library / Component: Form Wizard
+     Description: Step 3 page form
+     (c) Copyright by BRS with Nyros. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Form Wizard | JS Basic Apps</title>
+  <link rel="icon" href="http://203.193.173.125/buildriseshine/favicon.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/wizard.css" />
+  <link
+  type="text/css"
+  href="assets/js/jQuery-Date-Time-Picke-Plugin-Simple-Datetimepicker/jquery.simple-dtpicker.css"
+  rel="stylesheet"
+/>
+
+</head>
+
+<body class="body-state1">
+  <header>
+    <div class="d-flex bg-gradient">
+      <div class="d-flex flex-grow-1">
+        <nav class="courseTitle">
+          <button class="navbar-brand border-0">
+            <img src="assets/img/bearded-wizard-logo.jpg" alt="logo" />
+          </button>
+        </nav>
+        <div class="flex-grow-1">
+          <div class="ReactTitle ps-3 d-flex align-items-center">
+            <img src="assets/img/logo-javascript@2x.png" alt="logo" />
+            <h3 class="mb-0">JS Basic Apps</h3>
+          </div>
+          <div class="d-flex ps-3 align-items-center">
+            <div class="flex-grow-1">
+              <h4>Form Wizard</h4>
+              <p class="pb-0 text-start">
+                Purpose: From wizard
+              </p>
+              <p class="pb-0 mt-0 text-start"><a href="https://github.com/brs-studio/js-basics/tree/main/rocket" target="_blank" >Git Repository</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main role="main text-center" style="height: 700px;">
+    <div class="wrapper h-100">
+      <div class="Grid Grid--full Grid--center" >
+        <div class="Grid-cell h-80 OuterFormBlock"  style="background-color:aliceblue;">
+          <div class="Grid Grid--gutters Grid--cols-2 h-100">
+            <div class="Grid-cell h-100">
+              <div class="Grid Grid--full Grid--center h-100 overflow">
+                <div class="Grid-cell">
+                  <div class="formMiddleBlock">
+                    <div class="brandSection">
+                      <!-- <img src="assets/img/logo.jpg" /> -->
+                      <h1>When can we contact you?</h1>
+                      <p>Book a time and date slot with one of our team.</p>
+                    </div>
+                    <form action="thankyou.html">
+                      <div>
+                        <div id="date_picker"></div>
+                      </div>
+
+                      <div>
+                        <button class="btn btn-primary" type="submit">Continue</button>
+                      </div>
+                    </form>
+                    <div>
+                      <ul>
+                        <li></li>
+                        <li class="active"></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Grid-cell rightBlock" >
+              <div class="Grid Grid--full Grid--bottom" style="height: 100px; margin-top: 100px;">
+                <div class="Grid-cell">
+                  <div class="brandSection brandSectionRight">
+                    <img src="assets/img/rocket.png" class="brandLogo" />
+                    <h1>Manifest in an Empowering Software Career</h1>
+                    <p>
+                      Experience how Form Wizard shall help you to BUILD a
+                      strong career foundation that allows you to RISE & SHINE
+                      as a real-life ‘world-class’ professional.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer footer-dark">
+    <div class="d-flex justify-content-between px-5">
+      <div>ALL RIGHTS RESERVED FORM WIZARD 2022</div>
+      <div>
+        <button onclick="setTheme('#1A4B84')" class="theme-switch theme-switch-chathams_blue"></button>
+        <button onclick="setTheme('#03EEE7')" class="theme-switch theme-switch-tamarillo"></button>
+        <button onclick="setTheme('#F806DB')" class="theme-switch theme-switch-yellow_sea"></button>
+      </div>
+      <div>
+        <P>A FLEXIBLE TOOL WHICH CREATES FORMS WHICH EXCUTE A SINGLE QUERY.</P>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="assets/js/jQuery-Date-Time-Picke-Plugin-Simple-Datetimepicker/jquery.simple-dtpicker.js"></script>
+<script defer src="assets/js/signup-step3.js"></script>
+<script defer src="assets/js/script.js"></script>
+
+</html>
