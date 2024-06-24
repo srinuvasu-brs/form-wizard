@@ -334,12 +334,12 @@ function validation(form) {
         x[i].focus();
         x[i].style.border = '1px solid red';
         return false;
-      }else if (type == 'phone') {
+      } else if (type == 'phone') {
         if (x[i].value.length == 0) {
           x[i].focus();
           x[i].style.border = '1px solid red';
           return false;
-        }
+        } 
     }else if (type == 'radio') {
       let l = x[i].parentNode.children.length
       for (let j = 0; j < l; j++) {
@@ -358,6 +358,7 @@ function validation(form) {
       } else {
         radioButton = 0
         radioCheck = 0
+      }
       }
     }
   }
