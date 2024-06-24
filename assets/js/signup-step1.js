@@ -104,7 +104,25 @@ function text(textValid) {
   }
 }
 
-// phone number 
+// phone number
+function validatePhoneNumber () {
+  const PhoneInput = document.getElementById('phone');
+  const phoneError = document.getElementById('phoneError');
+  const phoneValue = PhoneInput.value;
+  if (!/^\*$/.test(phoneValue)) {
+    phoneError.textContent = 'Phone number must contain only digits.';
+    PhoneInput.value = phoneValue.replace(/\D/g, '');
+  } else {
+    phoneError.textContent = '';
+  }
+  if (mobileNumber.length === 10 && /^\d+$/.test(mobileNumber)) {
+    errorElement.textContent = ''; // Clear error message
+    alert('Form submitted successfully with mobile number: ' + mobileNumber);
+    // You can proceed with form submission or further processing
+  } else {
+    errorElement.textContent = 'Please enter exactly 10 digits';
+  }
+} 
 function phone(phoneValid) {
   let type = phoneValid.getAttribute('phone')
   let show = phoneValid.name + 'error'
