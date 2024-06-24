@@ -139,8 +139,7 @@ function phone(phoneValid) {
     } else if (phoneValue >= minLength && phoneValue <= maxLength) {
       document.getElementById(show).innerHTML = '&#10004; ok'
       document.getElementById(show).style.color = '#1758c1'
-      document.getElementById('firstname').style.border = '1px solid #1758c1'
-      document.getElementById('lastname').style.border = '1px solid #1758c1'
+      document.getElementById('phone').style.border = '1px solid #1758c1'
       return true
     }
   }
