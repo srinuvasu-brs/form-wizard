@@ -108,11 +108,11 @@
                       </div>
                       <label class="hide">Phone</label>
                       <div class="errorMesg">
-                        <input type="text" placeholder="Mobile Number" id="phone" oninput="validatePhoneNumber()"
+                        <input type="text" id="mobileNumber" name="mobileNumber" pattern="\d{10}" title="Please enter 10 digits" required
                         size="10"
                         autocomplete = "off"
                         required
-                        >
+                        ><br>
                         <div id="phoneError" class="error-message"></div>
                       </div>
                       <div class="radioGroup">
