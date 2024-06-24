@@ -104,6 +104,30 @@ function text(textValid) {
   }
 }
 
+// phone number 
+function phone(phoneValid) {
+  let type = phoneValid.getAttribute('phone')
+  let show = phoneValid.name + 'error'
+  let minLength = phoneValid.getAttribute('min')
+  let maxLength = phoneValid.getAttribute('max')
+  if (minLength == null) minLength = 2
+  if (maxLength == null) maxLength = 50
+  if (type == 'phone') {
+    let phoneValue = phoneValid.value.length
+    if (phoneValue == 1) {
+      document.getElementById(show).innerHTML = '&#10008; minimum 10 chars'
+      document.getElementById(show).style.color = 'red'
+      return false
+    } else if (phoneValue >= minLength && phoneValue <= maxLength) {
+      document.getElementById(show).innerHTML = '&#10004; ok'
+      document.getElementById(show).style.color = '#1758c1'
+      document.getElementById('firstname').style.border = '1px solid #1758c1'
+      document.getElementById('lastname').style.border = '1px solid #1758c1'
+      return true
+    }
+  }
+}
+
 // Addres Validation Function
 document.addEventListener("DOMContentLoaded", () => {
   const textarea = document.getElementById('address');
@@ -310,7 +334,12 @@ function validation(form) {
         x[i].focus();
         x[i].style.border = '1px solid red';
         return false;
-      }
+      }else if (type == 'phone') {
+        if (x[i].value.length == 0) {
+          x[i].focus();
+          x[i].style.border = '1px solid red';
+          return false;
+        }
     }else if (type == 'radio') {
       let l = x[i].parentNode.children.length
       for (let j = 0; j < l; j++) {
