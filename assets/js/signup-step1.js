@@ -27,6 +27,14 @@ window.onload = function () {
         textarea(this)
       }
     }
+    if (root[elementNumber].id == 'phone') {
+      root[elementNumber].onfocus = function () {
+        myFocus(this)
+      }
+      root[elementNumber].onkeyup = function () {
+        phone(this)
+      }
+    }
     if (root[elementNumber].type == 'email') {
       root[elementNumber].onfocus = function () {
         myFocus(this)
@@ -124,6 +132,7 @@ function textarea(textareaValid) {
       }
   }
 }
+
 
 //---------------------------------------------------------------------
 // Email validation function
