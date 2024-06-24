@@ -128,7 +128,7 @@ function phone(phoneValid) {
   let show = phoneValid.name + 'error'
   let minLength = phoneValid.getAttribute('min')
   let maxLength = phoneValid.getAttribute('max')
-  if (minLength == null) minLength = 2
+  if (minLength == null) minLength = 10
   if (maxLength == null) maxLength = 50
   if (type == 'phone') {
     let phoneValue = phoneValid.value.length
