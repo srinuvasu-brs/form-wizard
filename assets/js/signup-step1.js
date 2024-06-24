@@ -337,32 +337,17 @@ function toggle() {
   }
 }
 
-function validateForm(event) {
-  event.preventDefault();
-  
-  var mobileNumber = document.getElementById('mobileNumber').value;
-  var errorElement = document.getElementById('error-msg');
-  
-  if (/^\d{10}$/.test(mobileNumber)) {
-    errorElement.textContent = ''; // Clear error message
-    alert('Form submitted successfully!');
-    // You can proceed with form submission or further processing
+function validatePhoneNumber () {
+  const PhoneInput = document.getElementById('phone');
+  const phoneError = document.getElementById('phoneError');
+  const phoneValue = PhoneInput.value;
+  if (!/^\*$/.test(phoneValue)) {
+    phoneError.textContent = 'Phone number must contain only digits.';
+    PhoneInput.value = phoneValue.replace(/\D/g, '');
   } else {
-    errorElement.textContent = 'Please enter a 10-digit mobile number';
+    phoneError.textContent = '';
   }
 }
-
-// function validatePhoneNumber () {
-//   const PhoneInput = document.getElementById('phone');
-//   const phoneError = document.getElementById('phoneError');
-//   const phoneValue = PhoneInput.value;
-//   if (!/^\*$/.test(phoneValue)) {
-//     phoneError.textContent = 'Phone number must contain only digits.';
-//     PhoneInput.value = phoneValue.replace(/\D/g, '');
-//   } else {
-//     phoneError.textContent = '';
-//   }
-// }
 
 // function updateCharCount() {
 //   const textarea = documen.getElementById('type');
